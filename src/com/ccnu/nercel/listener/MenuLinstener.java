@@ -1,36 +1,34 @@
 package com.ccnu.nercel.listener;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
-import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JMenuItem;
 
 import com.ccnu.nercel.ui.Menu;
 
 
 public class MenuLinstener implements ActionListener {
-
+	public static Color color = new Color(0, 0, 0);
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		
 		JMenuItem target = (JMenuItem)e.getSource();
 	    String actionCommand = target.getActionCommand();
 	    System.out.println(actionCommand);
-	    if(actionCommand.contentEquals("line")) {
-	    		Menu.type = Menu.LINE;
+	    if(actionCommand.contentEquals("save")) {
+	    			Function.save();
 	    		}
-	    if(actionCommand.contentEquals("rectangle")) {
-    			Menu.type = Menu.RECT;
+	    if(actionCommand.contentEquals("undo")) {
+	    			Function.undo();
     			}
-	    if(actionCommand.contentEquals("circle")) {
-			Menu.type = Menu.CIRCLE;
+	    if(actionCommand.contentEquals("redo")) {
+	    			Function.redo();
 			}
-	    if(actionCommand.contentEquals("write")) {
-    			Menu.type = Menu.write;
+	    if(actionCommand.contentEquals("Red")) {
     			}
 	}
 

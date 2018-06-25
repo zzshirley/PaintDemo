@@ -86,8 +86,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 		if (Menu.type == Menu.write) {
 			dot.addpoint(End.x, Begin.y, End.x, Begin.y);
 			Begin = End;
-		} /*else if (type == 1) {
-
+		} else if (type == 1) {
 			if (End.x > Begin.x) {
 				End.x = Begin.x + Math.min(Math.abs(End.x - Begin.x), Math.abs(End.y - Begin.y));
 			} else {
@@ -100,7 +99,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 				End.y = Begin.y + Math.min(Math.abs(End.x - Begin.x), Math.abs(End.y - Begin.y));
 			}
 		}
-		repaint();*/
+		repaint();
 
 	}
 

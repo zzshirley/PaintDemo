@@ -42,7 +42,8 @@ public class Menu extends JFrame{
 	private JMenuItem[] shape= {
 		new JMenuItem("open",KeyEvent.VK_F),
 		new JMenuItem("save",KeyEvent.VK_A),
-		new JMenuItem("exit"),
+		new JMenuItem("redo"),
+		new JMenuItem("undo"),
 		};
 	public Menu() {
 		FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT,20,100);

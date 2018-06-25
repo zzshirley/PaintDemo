@@ -37,6 +37,9 @@ public class DrawDot extends Shape{
 		g.setStroke(new BasicStroke(ThicknessPanel.thick));
 
 	}
+	public void print(PrintWriter pWriter) {
+		super.print(pWriter);
+	}
 	public void addpoint(int x1,int y1,int x2,int y2) {
 		// TODO Auto-generated method stub
 		points.add(new ScreenPoint(x1, y1));
