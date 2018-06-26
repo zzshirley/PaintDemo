@@ -3,6 +3,7 @@ package com.ccnu.nercel.ui;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.Stack;
 import java.util.Vector;
 
 import javax.swing.*;
@@ -23,7 +24,7 @@ public class Menu extends JFrame{
 	private JTextField t = new JTextField("hello",30);
 	private JMenuBar mb1 =new JMenuBar();
 	private ColorPanel gcolor =new ColorPanel();
-	public static ArrayList<Shape> shapes = new ArrayList<Shape>();
+	public static Stack<Shape> shapes = new Stack<Shape>();
 	public static ThicknessPanel thickpanel = new ThicknessPanel();
 	
 	public final static int LINE = 0; 
@@ -43,6 +44,7 @@ public class Menu extends JFrame{
 		new JMenuItem("save",KeyEvent.VK_S),
 		new JMenuItem("redo",KeyEvent.VK_C),
 		new JMenuItem("undo",KeyEvent.VK_Z),
+		new JMenuItem("clear",KeyEvent.VK_C),
 		};
 	public Menu() {
 		FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT,20,100);

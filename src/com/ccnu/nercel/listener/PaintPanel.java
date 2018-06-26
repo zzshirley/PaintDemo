@@ -11,6 +11,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
+import java.util.Stack;
 import java.util.Vector;
 
 import javax.swing.JPanel;
@@ -33,7 +34,6 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 	public static int w = 0;
 	public static int h = 0;
 	DrawDot dot;
-	public static int type=1;
 
 	public PaintPanel() {
 
@@ -87,19 +87,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 		if (Menu.type == Menu.write) {
 			dot.addpoint(Begin.x, Begin.y, End.x, End.y);
 			Begin = End;
-		} else if (type == 1) {
-			if (End.x > Begin.x) {
-				End.x = Begin.x + Math.min(Math.abs(End.x - Begin.x), Math.abs(End.y - Begin.y));
-			} else {
-				End.x = Begin.x - Math.min(Math.abs(End.x - Begin.x), Math.abs(End.y - Begin.y));
-
-			}
-			if (End.y < Begin.y) {
-				End.y = Begin.y - Math.min(Math.abs(End.x - Begin.x), Math.abs(End.y - Begin.y));
-			} else {
-				End.y = Begin.y + Math.min(Math.abs(End.x - Begin.x), Math.abs(End.y - Begin.y));
-			}
-		}
+		} 
 		repaint();
 
 	}
@@ -152,7 +140,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 
 	}
 
-	public ArrayList<Shape> getshapes() {
+	public Stack<Shape> getshapes() {
 		return Menu.shapes;
 
 	}

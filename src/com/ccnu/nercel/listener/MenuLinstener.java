@@ -28,7 +28,8 @@ public class MenuLinstener implements ActionListener {
 	    if(actionCommand.contentEquals("redo")) {
 	    			Function.redo();
 			}
-	    if(actionCommand.contentEquals("Red")) {
+	    if(actionCommand.contentEquals("clear")) {
+	    			Function.clear();
     			}
 	}
 
