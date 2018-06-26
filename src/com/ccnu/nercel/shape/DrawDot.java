@@ -16,8 +16,8 @@ public class DrawDot extends Shape{
 	public DrawDot() {
 		// TODO Auto-generated constructor stub
 	}
-	public DrawDot(Color color, int width, int x1, int y1, int x2, int y2) {
-		super(color, width, x1, y1, x2, y2);
+	public DrawDot(Color color, int Thickness, int x1, int y1, int x2, int y2) {
+		super(color, Thickness, x1, y1, x2, y2);
 	}
 
 

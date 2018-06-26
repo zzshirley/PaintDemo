@@ -31,7 +31,7 @@ public class Shape {
 		
 	}
 	public void print(PrintWriter pWriter) {
-		pWriter.printf("%010d%010d%010d%010d%010d%010d\r\n", color.getRGB(),Thickness, points.elementAt(0).x,
+		pWriter.printf("%010d%010d%010d%010d%010d%010d\r\n", color.getRGB(),Thickness,points.elementAt(0).x,
 				points.elementAt(0).y, points.elementAt(1).x, points.elementAt(1).y);
 	}
 	public Point getminpoint() {
