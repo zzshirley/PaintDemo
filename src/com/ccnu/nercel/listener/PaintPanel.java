@@ -18,6 +18,7 @@ import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 
 import com.ccnu.nercel.ui.Menu;
+import com.ccnu.nercel.file.Save;
 import com.ccnu.nercel.shape.*;
 
 
@@ -84,7 +85,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 		// TODO Auto-generated method stub
 		End = e.getPoint();
 		if (Menu.type == Menu.write) {
-			dot.addpoint(End.x, Begin.y, End.x, Begin.y);
+			dot.addpoint(Begin.x, Begin.y, End.x, End.y);
 			Begin = End;
 		} else if (type == 1) {
 			if (End.x > Begin.x) {
@@ -127,7 +128,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 		} else if (Menu.type == Menu.write) {
 			Menu.shapes.add(dot);
 		}
-		//SaveFile.hassave = false;
+		Save.hassave = false;
 		repaint();
 	}
 

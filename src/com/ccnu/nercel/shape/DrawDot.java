@@ -12,7 +12,7 @@ import com.ccnu.nercel.listener.ThicknessPanel;
 
 
 public class DrawDot extends Shape{
-	private int num;
+	//private int num;
 	public DrawDot() {
 		// TODO Auto-generated constructor stub
 	}
@@ -45,8 +45,8 @@ public class DrawDot extends Shape{
 		points.add(new ScreenPoint(x1, y1));
 		points.add(new ScreenPoint(x2, y2));		
 	}
-	public void setcolorthick(Color color1,int thick) {
+	public void setcolorthick(Color color0,int thick) {
 		Thickness=thick;
-		color=color1;
+		color=color0;
 	}
 }
