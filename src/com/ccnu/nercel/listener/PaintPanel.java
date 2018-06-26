@@ -73,7 +73,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 			if (Menu.type== Menu.RECT) {
 				g2.drawRect(min.x, min.y, w, h);
 			} else if (Menu.type == Menu.LINE) {
-				g2.drawLine(End.x, Begin.y, End.x, Begin.y);
+				g2.drawLine(Begin.x, Begin.y, End.x, End.y);
 			} else if (Menu.type == Menu.CIRCLE) {
 				g2.drawOval(min.x, min.y, w, h);
 			}
