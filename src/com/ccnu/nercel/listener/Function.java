@@ -15,12 +15,12 @@ public class Function {
 	
 	public static Stack<Shape> rshape = new Stack<Shape>();
 	
-	private static int save=0;
+	/*private static int save=0;
 	private static int open=1;
 	private static int clear=3;
 	private static int redo=3;
 	private static int undo=3;
-	public int type=5;
+	public int type=5;*/
 	
 	
 	
