@@ -40,7 +40,10 @@ public class Function {
 		}
 	}
 	public static void redo() {
-		if(!Menu.shapes.isEmpty()) {
+		if(rshape.isEmpty()) {
+			JOptionPane.showMessageDialog(null, "操作错误！无法redo");
+		}
+		else if(!Menu.shapes.isEmpty()) {
 			Shape r=rshape.pop();
 			Menu.shapes.add(r);
 			Menu.pnlDisplayArea.repaint();

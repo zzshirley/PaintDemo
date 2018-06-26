@@ -28,15 +28,6 @@ public class BtnLinstener implements ActionListener{
 	    if(actionCommand.contentEquals("Write")) {
     				Menu.type = Menu.write;
     			}
-	    if(actionCommand.contentEquals("Red")) {
-	    	
-	    		}
-	    if(actionCommand.contentEquals("Black")) {
-	    	
-	    		}
-	    if(actionCommand.contentEquals("Blue")) {
-	    	
-	    		}
 	}
 
 }

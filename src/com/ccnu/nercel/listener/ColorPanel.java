@@ -31,6 +31,9 @@ public class ColorPanel extends JPanel{
                 color=Color.RED;  
                 	btn1.setForeground(color);
                 	btn1.repaint();
+                	btn2.setForeground(Color.BLACK);
+                	btn3.setForeground(Color.BLACK);
+                	btn4.setForeground(Color.BLACK);
                 	Menu.thickpanel.repaint();
 			}});
 		btn2.addActionListener(new ActionListener() {
@@ -40,6 +43,9 @@ public class ColorPanel extends JPanel{
                 color=Color.GREEN;  
                 	btn2.setForeground(color);
                 	btn2.repaint();
+                	btn1.setForeground(Color.BLACK);
+                	btn3.setForeground(Color.BLACK);
+                	btn4.setForeground(Color.BLACK);
                 	Menu.thickpanel.repaint();
 			}});
 		btn3.addActionListener(new ActionListener() {
@@ -49,17 +55,23 @@ public class ColorPanel extends JPanel{
                 color=Color.BLUE;  
                 	btn3.setForeground(color);
                 	btn3.repaint();
+                	btn2.setForeground(Color.BLACK);
+                	btn1.setForeground(Color.BLACK);
+                	btn4.setForeground(Color.BLACK);
                 	Menu.thickpanel.repaint();
 			}});
 		btn4.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				chooser=new JColorChooser();
+				chooser=new JColorChooser(); 
 				color0=chooser.showDialog(new JFrame(), "ColorChooser",Color.lightGray );  
                 if (color0 != null)  
                    color=color0;  
                 	   btn4.setForeground(color);
+                	   btn2.setForeground(Color.BLACK);
+                	   btn3.setForeground(Color.BLACK);
+                	   btn1.setForeground(Color.BLACK);
                 	   Menu.thickpanel.repaint();
 			}});
 		add(btn1);
