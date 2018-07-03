@@ -38,8 +38,8 @@ public class Paint extends JFrame{
 		new JMenuItem("undo",KeyEvent.VK_Z),
 		new JMenuItem("clear",KeyEvent.VK_Z),
 		};
+	
 	public Paint() {
-		FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT,20,100);
 		pnlCommandArea.setLayout(new FlowLayout());		
 		MenuLinstener mul = new MenuLinstener();
 		JFrame jf = new JFrame("IPaint");

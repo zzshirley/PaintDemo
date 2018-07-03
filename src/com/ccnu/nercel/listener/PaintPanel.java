@@ -85,8 +85,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 			}else {
 				dot.DrawShape(g2);
 				}
-			}
-	
+			}	
 	}
 /*
  * @see java.awt.event.MouseMotionListener#mouseDragged(java.awt.event.MouseEvent)
