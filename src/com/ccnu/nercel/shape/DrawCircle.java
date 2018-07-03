@@ -7,6 +7,9 @@ import java.io.PrintWriter;
 
 import com.ccnu.nercel.listener.ColorPanel;
 import com.ccnu.nercel.listener.ThicknessPanel;
+/*
+ * 圆形
+ */
 
 public class DrawCircle extends Shape{
 	public DrawCircle(Color color,int Thickness,int x1,int y1,int x2,int y2) {

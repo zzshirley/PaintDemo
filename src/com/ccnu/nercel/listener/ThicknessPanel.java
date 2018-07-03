@@ -15,9 +15,12 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 
-
-
-
+/*
+ * 图形线条粗细设置panel
+ * 一共两行，第一行jSlider滑块滑动选择粗细程度
+ * 第二行是一条直线，根据滑块选择粗细更新直线粗细
+ * 
+ */
 public class ThicknessPanel extends JPanel{
 	
 	
@@ -39,7 +42,7 @@ public class ThicknessPanel extends JPanel{
 
 		add(jPanel_data);
 
-		jSlider.setMaximum(100);
+		jSlider.setMaximum(100);//最大值
 		jSlider.setMinimum(thick);
 		jSlider.setValue(thick);
 		jSlider.addChangeListener(new ChangeListener() {
@@ -47,7 +50,7 @@ public class ThicknessPanel extends JPanel{
 			@Override
 			public void stateChanged(ChangeEvent e) {
 				// TODO Auto-generated method stub
-				thick = jSlider.getValue() / 3;
+				thick = jSlider.getValue() / 3;//线条粗细数值
 				repaint();
 				PaintPanel.thick = thick;
 			}

@@ -8,7 +8,9 @@ import java.io.PrintWriter;
 import com.ccnu.nercel.listener.ColorPanel;
 import com.ccnu.nercel.listener.ThicknessPanel;
 
-
+/*
+ * 直线
+ */
 public class DrawLine extends Shape{
 	
 	public DrawLine(Color color,int Thickness,int x1,int y1,int x2,int y2) {

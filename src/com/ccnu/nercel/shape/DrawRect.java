@@ -7,7 +7,9 @@ import java.io.PrintWriter;
 
 import com.ccnu.nercel.listener.ColorPanel;
 import com.ccnu.nercel.listener.ThicknessPanel;
-
+/*
+ * 长方形
+ */
 public class DrawRect extends Shape{
 	public DrawRect(Color color,int Thickness,int x1,int y1,int x2,int y2) {
 		super(color,Thickness,x1,y1,x2,y2);

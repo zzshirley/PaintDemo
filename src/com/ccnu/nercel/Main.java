@@ -1,12 +1,12 @@
 package com.ccnu.nercel;
 
-import com.ccnu.nercel.ui.Menu;
+import com.ccnu.nercel.ui.Paint;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Menu menu = new Menu();
+		Paint paint = new Paint();
 	}
 
 }

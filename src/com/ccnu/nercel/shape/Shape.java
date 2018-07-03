@@ -8,15 +8,19 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Vector;
 
-
+/*
+ * Shape图形类
+ * 
+ * 
+ */
 
 public class Shape {
 	protected Vector<ScreenPoint> points = new Vector<ScreenPoint>();
-	protected Color color;
-	protected int Thickness;
-	protected Point min;
-	protected int w;
-	protected int h;
+	protected Color color; //颜色
+	protected int Thickness; //粗细
+	protected Point min; //
+	protected int w; //宽度
+	protected int h; //高度
 	
 	public Shape(Color color,int Thickness,int x1,int y1,int x2,int y2) {
 		min = new Point(Math.min(x1, x2), Math.min(y1, y2));
@@ -30,11 +34,11 @@ public class Shape {
 	public Shape() {
 		
 	}
-	public void print(PrintWriter pWriter) {
+	public void print(PrintWriter pWriter) {/*打印图形信息*/
 		pWriter.printf("%010d%010d%010d%010d%010d%010d\r\n", color.getRGB(),Thickness,points.elementAt(0).x,
 				points.elementAt(0).y, points.elementAt(1).x, points.elementAt(1).y);
 	}
-	public void DrawShape(Graphics2D g) {
+	public void DrawShape(Graphics2D g) {/*画图*/
 		
 	}
 }

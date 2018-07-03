@@ -10,7 +10,9 @@ import java.io.PrintWriter;
 import com.ccnu.nercel.listener.ColorPanel;
 import com.ccnu.nercel.listener.ThicknessPanel;
 
-
+/*
+ * 随手写（连续画出鼠标点）
+ */
 public class DrawDot extends Shape{
 	//private int num;
 	public DrawDot() {

@@ -7,9 +7,11 @@ import java.awt.event.ActionListener;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 
-import com.ccnu.nercel.ui.Menu;
+import com.ccnu.nercel.ui.Paint;
 
-
+/*
+ * Menu 监听
+ */
 public class MenuLinstener implements ActionListener {
 
 	@Override

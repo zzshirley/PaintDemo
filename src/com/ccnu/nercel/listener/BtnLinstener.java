@@ -6,8 +6,12 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JMenuItem;
 
-import com.ccnu.nercel.ui.Menu;
-
+import com.ccnu.nercel.ui.DrawShapes;
+import com.ccnu.nercel.ui.Paint;
+/*
+ * Button监听，获取Button内容
+ * 画相应的图形
+ */
 public class BtnLinstener implements ActionListener{
 
 	@Override
@@ -17,16 +21,16 @@ public class BtnLinstener implements ActionListener{
 	    String actionCommand = target.getActionCommand();
 	    //System.out.println(actionCommand);
 	    if(actionCommand.contentEquals("Line")) {
-	    			Menu.type = Menu.LINE;
+	    		DrawShapes.type = DrawShapes.LINE;
 	    		}
 	    if(actionCommand.contentEquals("Rectangle")) {
-    				Menu.type = Menu.RECT;
+	    		DrawShapes.type = DrawShapes.RECT;
     			}
 	    if(actionCommand.contentEquals("Circle")) {
-				Menu.type = Menu.CIRCLE;
+	    		DrawShapes.type = DrawShapes.CIRCLE;
 			}
 	    if(actionCommand.contentEquals("Write")) {
-    				Menu.type = Menu.write;
+	    		DrawShapes.type = DrawShapes.write;
     			}
 	}
 
