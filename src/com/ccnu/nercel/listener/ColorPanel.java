@@ -1,6 +1,7 @@
 package com.ccnu.nercel.listener;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
@@ -17,12 +18,12 @@ public class ColorPanel extends JPanel{
 		btn2 = new JButton("Green"),
 		btn3 = new JButton("Blue"),
 		btn4 = new JButton("More");
-	JPanel panel;
 	JColorChooser chooser;
 	Color color0;
 	public static Color color = new Color(0, 0, 0);
 	public ColorPanel() {
 		super(new GridLayout(2,2));
+		setPreferredSize(new Dimension(120, 60));
 		color=new Color(0,0,0);
 		btn1.addActionListener(new ActionListener() {
 			@Override

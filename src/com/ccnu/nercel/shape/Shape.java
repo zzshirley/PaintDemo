@@ -34,21 +34,6 @@ public class Shape {
 		pWriter.printf("%010d%010d%010d%010d%010d%010d\r\n", color.getRGB(),Thickness,points.elementAt(0).x,
 				points.elementAt(0).y, points.elementAt(1).x, points.elementAt(1).y);
 	}
-	public Point getminpoint() {
-		return min;
-	}
-
-	public Color getcolor() {
-		return color;
-	}
-
-	public int getw() {
-		return w;
-	}
-
-	public int geth() {
-		return h;
-	}
 	public void DrawShape(Graphics2D g) {
 		
 	}

@@ -7,7 +7,6 @@ import javax.swing.JPanel;
 
 import com.ccnu.nercel.listener.ColorPanel;
 import com.ccnu.nercel.listener.PaintPanel;
-import com.ccnu.nercel.listener.ShapeButton;
 import com.ccnu.nercel.listener.ThicknessPanel;
 import com.ccnu.nercel.shape.Shape;
 

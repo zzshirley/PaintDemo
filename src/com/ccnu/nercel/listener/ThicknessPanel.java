@@ -23,7 +23,6 @@ public class ThicknessPanel extends JPanel{
 	
 	public static int thick = 1;
 	JSlider jSlider;
-	//JTextField jTextField;
 	JPanel jPanel_data;
 
 	public ThicknessPanel() {
@@ -33,12 +32,10 @@ public class ThicknessPanel extends JPanel{
 
 		jSlider = new JSlider();
 		jPanel_data = new JPanel();
-		//jTextField = new JTextField();
 
 		jPanel_data.setLayout(new GridLayout(1, 2));
 
 		jPanel_data.add(jSlider);
-		//jPanel_data.add(jTextField);
 
 		add(jPanel_data);
 
@@ -51,14 +48,10 @@ public class ThicknessPanel extends JPanel{
 			public void stateChanged(ChangeEvent e) {
 				// TODO Auto-generated method stub
 				thick = jSlider.getValue() / 3;
-				//jTextField.setText("" + (thick*3+1));
 				repaint();
 				PaintPanel.thick = thick;
 			}
 		});
-
-		//jTextField.setText("" + thick);
-		//jTextField.setEditable(false); 
 	}
 
 	@Override

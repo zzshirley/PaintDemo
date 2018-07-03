@@ -1,10 +1,13 @@
-package com.ccnu.nercel.listener;
+package com.ccnu.nercel.ui;
 
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.lang.reflect.Constructor;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
+
+import com.ccnu.nercel.listener.BtnLinstener;
 
 public class ShapeButton extends JPanel{
 	
@@ -18,6 +21,7 @@ public class ShapeButton extends JPanel{
 	
 	public ShapeButton() {
 		super(new GridLayout(2, 2));
+		setPreferredSize(new Dimension(180, 60));
 		btn1.addActionListener(btns);
 		btn2.addActionListener(btns);
 		btn3.addActionListener(btns);

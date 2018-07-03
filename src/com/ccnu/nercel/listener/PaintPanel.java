@@ -76,9 +76,11 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 				g2.drawLine(Begin.x, Begin.y, End.x, End.y);
 			} else if (Menu.type == Menu.CIRCLE) {
 				g2.drawOval(min.x, min.y, w, h);
+			}else {
+				dot.DrawShape(g2);
+				}
 			}
-			dot.DrawShape(g2);
-		}
+	
 	}
 
 	public void mouseDragged(MouseEvent e) {
@@ -97,6 +99,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 		Begin = e.getPoint();
 		End = Begin;		
 		if (Menu.type == Menu.write) {
+			System.out.println("hello");
 			dot = new DrawDot();
 			color = ColorPanel.color;
 			dot.setcolorthick(color, thick);
@@ -116,7 +119,7 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 		} else if (Menu.type == Menu.write) {
 			Menu.shapes.add(dot);
 		}
-		Save.hassave = false;
+		//Save.hassave = false;
 		repaint();
 	}
 

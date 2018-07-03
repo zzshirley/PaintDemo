@@ -8,7 +8,6 @@ import java.util.Vector;
 
 import javax.swing.*;
 
-import com.ccnu.nercel.listener.ShapeButton;
 import com.ccnu.nercel.listener.BtnLinstener;
 import com.ccnu.nercel.listener.ColorPanel;
 import com.ccnu.nercel.listener.ThicknessPanel;
@@ -33,9 +32,6 @@ public class Menu extends JFrame{
 	public final static int write = 3;
 	public static int type = LINE;
 	
-	private String[] choices={
-		"redo","undo"
-	};
 	private JMenu
 		f=new JMenu("File");
 	    
@@ -44,15 +40,14 @@ public class Menu extends JFrame{
 		new JMenuItem("save",KeyEvent.VK_S),
 		new JMenuItem("redo",KeyEvent.VK_C),
 		new JMenuItem("undo",KeyEvent.VK_Z),
-		new JMenuItem("clear",KeyEvent.VK_C),
+		new JMenuItem("clear",KeyEvent.VK_Z),
 		};
 	public Menu() {
 		FlowLayout flowLayout = new FlowLayout(FlowLayout.LEFT,20,100);
 		pnlCommandArea.setLayout(new FlowLayout());
 		ShapeButton sbtn = new ShapeButton();
 		MenuLinstener mul = new MenuLinstener();
-		BtnLinstener btns = new BtnLinstener();
-		JFrame jf = new JFrame();
+		JFrame jf = new JFrame("IPaint");
 		JPanel jp = new JPanel();
 		for (JMenuItem sh:shape) {
 			f.add(sh);
