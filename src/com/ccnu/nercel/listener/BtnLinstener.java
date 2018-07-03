@@ -19,7 +19,7 @@ public class BtnLinstener implements ActionListener{
 		// TODO Auto-generated method stub
 		JButton target = (JButton)e.getSource();
 	    String actionCommand = target.getActionCommand();
-	    //System.out.println(actionCommand);
+	    System.out.println(actionCommand);
 	    if(actionCommand.contentEquals("Line")) {
 	    		DrawShapes.type = DrawShapes.LINE;
 	    		}
@@ -32,6 +32,18 @@ public class BtnLinstener implements ActionListener{
 	    if(actionCommand.contentEquals("Write")) {
 	    		DrawShapes.type = DrawShapes.write;
     			}
+	    if(actionCommand.contentEquals("redo")) {
+	    	Function.redo();
+	    }
+	    if(actionCommand.contentEquals("undo")) {
+	    	Function.undo();
+	    }
+	    if(actionCommand.contentEquals("clear")) {
+	    	Function.clear();
+	    } 
+	    if(actionCommand.contentEquals("save")) {
+	    	Function.save();
+	    }
 	}
 
 }
