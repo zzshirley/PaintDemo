@@ -21,7 +21,7 @@ public class ShapeButton extends JPanel{
 	
 	public ShapeButton() {
 		super(new GridLayout(2, 2));
-		setPreferredSize(new Dimension(180, 60));
+		setPreferredSize(new Dimension(250, 60));
 		btn1.addActionListener(btns);
 		btn2.addActionListener(btns);
 		btn3.addActionListener(btns);

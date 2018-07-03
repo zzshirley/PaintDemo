@@ -38,12 +38,41 @@ public class Paint extends JFrame{
 		new JMenuItem("undo",KeyEvent.VK_Z),
 		new JMenuItem("clear",KeyEvent.VK_Z),
 		};
+	/************/
+	JButton undobtn = new JButton(new ImageIcon("./icons/undo.png"));
+	JButton redobtn = new JButton(new ImageIcon("./icons/redo.png"));
+	JButton clearbtn = new JButton(new ImageIcon("./icons/clear.png"));
+	JButton savebtn = new JButton(new ImageIcon("./icons/save.png"));
 	
+    private JButton[] buttonArray = new JButton[]{undobtn,redobtn,clearbtn,savebtn};
+    private JToolBar toolbar = new JToolBar();
+    /*****************/
 	public Paint() {
 		pnlCommandArea.setLayout(new FlowLayout());		
 		MenuLinstener mul = new MenuLinstener();
+		BtnLinstener btns = new BtnLinstener();
 		JFrame jf = new JFrame("IPaint");
 		JPanel jp = new JPanel();
+		
+		/******/
+		JPanel jp1 = new JPanel();
+		for(int i=0;i<buttonArray.length;i++)
+		{
+			toolbar.add(buttonArray[i]);
+			
+			buttonArray[i].addActionListener(btns);
+			
+		}
+		buttonArray[0].setActionCommand("undo");
+		//为按钮设置工具提示信息，当把鼠标放在其上时显示提示信息
+		buttonArray[0].setToolTipText("undo");
+		buttonArray[1].setActionCommand("redo");
+		buttonArray[1].setToolTipText("redo");
+		buttonArray[2].setActionCommand("clear");
+		buttonArray[2].setToolTipText("clear");
+		buttonArray[3].setActionCommand("save");
+		buttonArray[3].setToolTipText("save");
+		/******/
 		for (JMenuItem sh:shape) {
 			f.add(sh);
 			sh.addActionListener(mul);
@@ -51,12 +80,20 @@ public class Paint extends JFrame{
 		mb1.add(f);
 		jf.setJMenuBar(mb1);
 		jp.setBackground(Color.WHITE);//白色背景
-		jp.add(thickpanel,FlowLayout.LEFT);
-		jp.add(gcolor,FlowLayout.LEFT);
-		jp.add(sbtn);
+		/******/
+		jp.setLayout(new BorderLayout());
+		jp.add(toolbar,BorderLayout.NORTH);
+		jp1.add(gcolor);
+		jp1.add(thickpanel);
+		jp1.add(sbtn);
+		jp.add(jp1);
+		/******/
+//		jp.add(thickpanel,FlowLayout.LEFT);
+//		jp.add(gcolor,FlowLayout.LEFT);
+//		jp.add(sbtn);
 		jf.add(jp,BorderLayout.NORTH);
 		jf.add(pnlDisplayArea);
-		jf.setSize(500, 500);//画图板大小500*500
+		jf.setSize(800, 700);//画图板大小800*800
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jf.setVisible(true);
 	}

@@ -27,24 +27,32 @@ public class Save {
 		// TODO Auto-generated constructor stub
 		Dimension imageSize = Paint.pnlDisplayArea.getSize();
 		jFileChooser=new JFileChooser();
-		jFileChooser.setCurrentDirectory(new File("/Users/xiaotong/Documents/program"));
-		jFileChooser.showSaveDialog(null);		
+		//设置文件路径
+		jFileChooser.setCurrentDirectory(new File("./"));
+		//设置默认文件名
+		jFileChooser.setSelectedFile(new File("未命名.png"));
+		//获取点击的是确定or取消
+		int returnVal = jFileChooser.showSaveDialog(null);		
 		BufferedImage image = new BufferedImage(imageSize.width,imageSize.height, BufferedImage.TYPE_INT_ARGB);
 		Graphics2D g = image.createGraphics();
 		Paint.pnlDisplayArea.paint(g);
         g.dispose();
-		try {
-			File fileW =jFileChooser.getSelectedFile();
-			ImageIO.write(image,"png", fileW);
-			JOptionPane notice=new JOptionPane ();
-			notice.showMessageDialog(null, "图片保存成功！","保存成功",JOptionPane.INFORMATION_MESSAGE);
-			hassave=true;
-		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        File fileW =jFileChooser.getSelectedFile();
+//        System.out.println(jFileChooser.CANCEL_OPTION);
+        if(returnVal == jFileChooser.APPROVE_OPTION & fileW != null) {
+        	try {
+    			ImageIO.write(image,"png", fileW);
+//    			JOptionPane notice=new JOptionPane ();
+    			JOptionPane.showMessageDialog(null, "图片已保存！","保存成功",JOptionPane.INFORMATION_MESSAGE);
+    			hassave=true;
+    		} catch (FileNotFoundException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		} catch (IOException e) {
+    			// TODO Auto-generated catch block
+    			e.printStackTrace();
+    		}
+        }
+		
 	}
 }

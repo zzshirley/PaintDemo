@@ -27,7 +27,7 @@ public class ColorPanel extends JPanel{
 	public static Color color = new Color(0, 0, 0);
 	public ColorPanel() {
 		super(new GridLayout(2,2));//2行2列网格布局
-		setPreferredSize(new Dimension(120, 60));
+		setPreferredSize(new Dimension(200, 60));
 		color=new Color(0,0,0);//初始颜色为黑
 		btn1.addActionListener(new ActionListener() {/*选择红色*/
 			@Override

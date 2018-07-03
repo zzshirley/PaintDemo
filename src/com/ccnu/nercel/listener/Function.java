@@ -35,7 +35,7 @@ public class Function {
 			rshape.push(s);
 			Paint.pnlDisplayArea.repaint();
 		} else {
-			JOptionPane.showMessageDialog(null, "Null Shapes");
+			JOptionPane.showMessageDialog(null, "内容为空，无法执行撤回操作");
 		}
 	}
 	/*
@@ -44,15 +44,20 @@ public class Function {
 	 */
 	public static void redo() {
 		if(rshape.isEmpty()) {
-			JOptionPane.showMessageDialog(null, "操作错误！无法redo");
+			JOptionPane.showMessageDialog(null, "已恢复所有撤回操作");
 		}
-		else if(!DrawShapes.shapes.isEmpty()) {
+//		else if(!DrawShapes.shapes.isEmpty()) {
+//			Shape r=rshape.pop();
+//			DrawShapes.shapes.add(r);
+//			Paint.pnlDisplayArea.repaint();
+//		}
+//		else if (DrawShapes.shapes.isEmpty()&&rshape.isEmpty()){
+//			JOptionPane.showMessageDialog(null, "Null Shapes");
+//		}
+		else {
 			Shape r=rshape.pop();
 			DrawShapes.shapes.add(r);
 			Paint.pnlDisplayArea.repaint();
-		}
-		else if (DrawShapes.shapes.isEmpty()&&rshape.isEmpty()){
-			JOptionPane.showMessageDialog(null, "Null Shapes");
 		}
 	}
 	/*
@@ -60,13 +65,17 @@ public class Function {
 	 * 清空shapes
 	 */
 	public static void clear() {
+		
 		if(!DrawShapes.shapes.isEmpty()) {
-			DrawShapes.shapes.clear();
-			rshape.clear();
-			Paint.pnlDisplayArea.repaint();
+			int res = JOptionPane.showConfirmDialog(null, "是否清空画板","",JOptionPane.YES_NO_OPTION);
+			if(res == JOptionPane.YES_OPTION) {
+				DrawShapes.shapes.clear();
+				rshape.clear();
+				Paint.pnlDisplayArea.repaint();
+			}
 		}
 		else {
-			JOptionPane.showMessageDialog(null, "Null Shapes");
+			JOptionPane.showMessageDialog(null, "画板为空");
 		}
 	}
 }
