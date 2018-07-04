@@ -14,7 +14,6 @@ import com.ccnu.nercel.listener.ThicknessPanel;
 import com.ccnu.nercel.shape.Shape;
 
 import com.ccnu.nercel.listener.PaintPanel;
-import com.ccnu.nercel.listener.MenuLinstener;
 
 public class Paint extends JFrame{
 	/*
@@ -28,16 +27,6 @@ public class Paint extends JFrame{
 	public static ThicknessPanel thickpanel = new ThicknessPanel();//粗细panel
 	ShapeButton sbtn = new ShapeButton();//图形选择panel
 	
-	private JMenu
-		f=new JMenu("File");
-	    
-		
-	private JMenuItem[] shape= {
-		new JMenuItem("save",KeyEvent.VK_S),
-		new JMenuItem("redo",KeyEvent.VK_C),
-		new JMenuItem("undo",KeyEvent.VK_Z),
-		new JMenuItem("clear",KeyEvent.VK_Z),
-		};
 	/************/
 	JButton undobtn = new JButton(new ImageIcon("./icons/undo.png"));
 	JButton redobtn = new JButton(new ImageIcon("./icons/redo.png"));
@@ -49,7 +38,6 @@ public class Paint extends JFrame{
     /*****************/
 	public Paint() {
 		pnlCommandArea.setLayout(new FlowLayout());		
-		MenuLinstener mul = new MenuLinstener();
 		BtnLinstener btns = new BtnLinstener();
 		JFrame jf = new JFrame("IPaint");
 		JPanel jp = new JPanel();
@@ -73,12 +61,6 @@ public class Paint extends JFrame{
 		buttonArray[3].setActionCommand("save");
 		buttonArray[3].setToolTipText("save");
 		/******/
-		for (JMenuItem sh:shape) {
-			f.add(sh);
-			sh.addActionListener(mul);
-		}
-		mb1.add(f);
-		jf.setJMenuBar(mb1);
 		jp.setBackground(Color.WHITE);//白色背景
 		/******/
 		jp.setLayout(new BorderLayout());
@@ -88,9 +70,6 @@ public class Paint extends JFrame{
 		jp1.add(sbtn);
 		jp.add(jp1);
 		/******/
-//		jp.add(thickpanel,FlowLayout.LEFT);
-//		jp.add(gcolor,FlowLayout.LEFT);
-//		jp.add(sbtn);
 		jf.add(jp,BorderLayout.NORTH);
 		jf.add(pnlDisplayArea);
 		jf.setSize(800, 700);//画图板大小800*800

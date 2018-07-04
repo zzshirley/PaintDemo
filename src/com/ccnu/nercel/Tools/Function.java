@@ -1,10 +1,9 @@
-package com.ccnu.nercel.listener;
+package com.ccnu.nercel.Tools;
 
 import java.util.Stack;
 
 import javax.swing.JOptionPane;
 
-import com.ccnu.nercel.file.Save;
 import com.ccnu.nercel.shape.Shape;
 import com.ccnu.nercel.ui.DrawShapes;
 import com.ccnu.nercel.ui.Paint;
@@ -46,14 +45,6 @@ public class Function {
 		if(rshape.isEmpty()) {
 			JOptionPane.showMessageDialog(null, "已恢复所有撤回操作");
 		}
-//		else if(!DrawShapes.shapes.isEmpty()) {
-//			Shape r=rshape.pop();
-//			DrawShapes.shapes.add(r);
-//			Paint.pnlDisplayArea.repaint();
-//		}
-//		else if (DrawShapes.shapes.isEmpty()&&rshape.isEmpty()){
-//			JOptionPane.showMessageDialog(null, "Null Shapes");
-//		}
 		else {
 			Shape r=rshape.pop();
 			DrawShapes.shapes.add(r);

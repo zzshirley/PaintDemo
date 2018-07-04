@@ -20,7 +20,6 @@ import javax.swing.border.LineBorder;
 
 import com.ccnu.nercel.ui.DrawShapes;
 import com.ccnu.nercel.ui.Paint;
-import com.ccnu.nercel.file.Save;
 import com.ccnu.nercel.shape.*;
 
 /*
@@ -133,7 +132,6 @@ public class PaintPanel extends JPanel implements MouseMotionListener, MouseList
 		} else if (DrawShapes.type == DrawShapes.write) {
 			DrawShapes.shapes.add(dot);
 		}
-		//Save.hassave = false;
 		repaint();
 	}
 

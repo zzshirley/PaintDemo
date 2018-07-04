@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JMenuItem;
 
+import com.ccnu.nercel.Tools.Function;
 import com.ccnu.nercel.ui.DrawShapes;
 import com.ccnu.nercel.ui.Paint;
 /*
@@ -19,7 +20,6 @@ public class BtnLinstener implements ActionListener{
 		// TODO Auto-generated method stub
 		JButton target = (JButton)e.getSource();
 	    String actionCommand = target.getActionCommand();
-	    System.out.println(actionCommand);
 	    if(actionCommand.contentEquals("Line")) {
 	    		DrawShapes.type = DrawShapes.LINE;
 	    		}
@@ -33,17 +33,17 @@ public class BtnLinstener implements ActionListener{
 	    		DrawShapes.type = DrawShapes.write;
     			}
 	    if(actionCommand.contentEquals("redo")) {
-	    	Function.redo();
-	    }
+	    		Function.redo();
+	    		}
 	    if(actionCommand.contentEquals("undo")) {
-	    	Function.undo();
-	    }
+	    		Function.undo();
+	   		}
 	    if(actionCommand.contentEquals("clear")) {
-	    	Function.clear();
-	    } 
+	    		Function.clear();
+	    		} 
 	    if(actionCommand.contentEquals("save")) {
-	    	Function.save();
-	    }
+	    		Function.save();
+	    		}
 	}
 
 }
